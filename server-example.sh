@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Install gen
+go get -u -v github.com/wzshiming/gen/cmd/gen
+
 # API v1
 gen route github.com/yaacov/AP-2018-OpenAPI/bookstore/v1/service
 gen client -o ./bookstore/v1/client/client_gen.go github.com/yaacov/AP-2018-OpenAPI/bookstore/v1/service

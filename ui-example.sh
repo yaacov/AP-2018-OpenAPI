@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+# sudo systemctl start docker
+
 # docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' openapi
-# docker rm openapi 
+# docker rm openapi
 
 # Test api v1
 docker run --name openapi -p 8080:8080 -e SWAGGER_JSON=/api/api-v1.yaml -v $(pwd)/bookstore:/api:Z swaggerapi/swagger-ui
